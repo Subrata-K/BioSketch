@@ -18,6 +18,34 @@
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<script>
+function updateDateTime() {
+    const now = new Date();
+
+    const dateOptions = {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+    };
+
+    const timeOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    };
+
+    document.getElementById("current-date").textContent =
+        now.toLocaleDateString('en-IN', dateOptions).toUpperCase();
+
+    document.getElementById("current-time").textContent =
+        now.toLocaleTimeString('en-IN', timeOptions);
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+  
 <body id="top">
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
@@ -28,7 +56,33 @@
 <div class="menu-item"><a href="#publications">Publications</a></div>
 <div class="menu-item"><a href="#contactMe">Contact Me</a></div>
 <div class="menu-item"><a href="#hobbies">Hobbies</a></div>
+<div class="sidebar-status">
 
+    <div class="status-item">
+        <div class="status-icon">📅</div>
+        <div>
+            <span class="status-label">TODAY</span>
+            <span id="current-date" class="status-value">Loading...</span>
+        </div>
+    </div>
+
+    <div class="status-item">
+        <div class="status-icon">◷</div>
+        <div>
+            <span class="status-label">LOCAL TIME</span>
+            <span id="current-time" class="status-value">Loading...</span>
+        </div>
+    </div>
+
+    <div class="status-item">
+        <div class="status-icon">👁</div>
+        <div>
+            <span class="status-label">VISITORS</span>
+            <span id="visitor-count" class="status-value">Loading...</span>
+        </div>
+    </div>
+
+</div>
 <!--<div class="menu-item"><a href="#teaching">Teaching</a></div>
 <div class="menu-item"><a href="#nptel">NPTELMooc</a></div>
 <div class="menu-item"><a href="#matlab">MATLAB&nbsp;page</a></div>-->
