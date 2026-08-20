@@ -490,3 +490,67 @@ table.imgtable, table.imgtable td {
     background-color: #45a049;
 }
 
+/* ================================
+   SIDEBAR LIVE STATUS
+   ================================ */
+
+.sidebar-status {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(82, 123, 189, 0.45);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+    margin-bottom: 8px;
+
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(82, 123, 189, 0.25);
+    border-radius: 7px;
+
+    transition: all 0.25s ease;
+}
+
+.status-item:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateX(3px);
+}
+
+.status-icon {
+    width: 27px;
+    min-width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #527bbd;
+    color: white;
+    border-radius: 50%;
+
+    font-size: 14px;
+}
+
+.status-label {
+    display: block;
+    color: #555;
+    font-size: 0.65em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.status-value {
+    display: block;
+    color: #022b6d;
+    font-family: "Courier New", monospace;
+    font-size: 0.82em;
+    font-weight: bold;
+    white-space: nowrap;
+}
